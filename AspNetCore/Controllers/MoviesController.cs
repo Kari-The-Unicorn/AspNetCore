@@ -20,7 +20,7 @@ namespace AspNetCore
         [HttpGet]
         public IEnumerable<Movie> Get()
         {
-            return _moviesCollection.Find(m => m.RunTimeInMins > 120).ToList();
+            return _moviesCollection.Find(m => m.Year > 2000).ToList();
         }
     }
 }

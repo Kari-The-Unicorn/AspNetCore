@@ -22,7 +22,7 @@ namespace AspNetCore.Controllers
 
         public ActionResult Index()
         {
-            moviesCollection = (IMongoCollection<Movie>)database.GetCollection<Movie>("movies").Find(m => m.RunTimeInMins > 120).ToList();
+            moviesCollection = (IMongoCollection<Movie>)database.GetCollection<Movie>("movies").Find(m => m.Year > 2000).ToList();
             return View(moviesCollection);
         }
     }

@@ -12,11 +12,14 @@ namespace AspNetCore
         [BsonElement("title")]
         public string Title { get; set; }
 
-        //[BsonElement("year")]
-        //public int Year { get; set; }
+        [BsonElement("year")]
+        public int Year { get; set; }
 
         [BsonElement("runtime")]
         public int RunTimeInMins { get; set; }
+
+        [BsonElement("poster")]
+        public string ImageSrc { get; set; }
 
         // [BsonExtraElements]
         // public object[] Bucket { get; set; }
